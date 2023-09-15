@@ -71,10 +71,28 @@
     </ul>
 
     <!-- Criar aqui seu programa PHP -->
+
+    <!-- MODO 1 -->
+    <?php
+    $a = 5;
+
+    if($a > 1) {
+        echo "True (verdadeiro)";
+    } else{
+        echo "False (falso)";
+    }
+    ?>
+
+    <!-- MODO 2 -->
+    <?php
+    $a = 5;
     
-    
-    <hr>
-    
+    if($a > 1) 
+    echo "True (verdadeiro)";
+    else
+    echo "False (falso)";
+    ?>
+<hr>
     <!-- ___________________________________________________________________ -->
     
     <div class="alert alert-light" role="alert" id="composta">
@@ -88,7 +106,7 @@
     </ul>
     
     <br>
-    <h4>&nbsp;if ( comparação ) {</h4>
+    <h4>&nbsp;if ( comparação ) </h4>
     <h4>&emsp;comando para comparação verdadeira</h4>
     <h4>&emsp;Se necessário aninhar, usar if simples ou composto</h4>
     <h4>&nbsp;else {</h4>
@@ -119,10 +137,21 @@
         </ol>
     </ul>
     <hr>
+        
 
     <!-- Criar aqui seu programa PHP -->
+        <h3>Ultrabook ASUS</h3>
+        <?php
 
-    
+        $a = 0;
+
+        if ($a < 14 ) {
+            echo '<mark>Urgente</mark>';
+            echo  '<p class="repor"> Necessário comprar </p>'; 
+        } else {
+            echo '<p class="ok"> Fica tranquilo, estoque OK!</p>';
+        }
+        ?>
     <hr>
 
     <!-- ___________________________________________________________________ -->
@@ -166,9 +195,28 @@
         <li>Exibir o nome do produto pedido conforme a opção escolhida na variável.</li>
     </ul>
     <hr>
-    
+    <p>$opçaoEscolhida</p>
     <!-- Criar aqui seu programa PHP -->
-    
+        <h3>Lista de opções</h1>
+        <h5>1 - Pastel</h5>
+        <h5>2 - Pizza</h5>
+        <h5>3 - Esfiha</h5>
+        
+        <?php
+        $opção = 2;
+            if($opção == 1) {
+                $opçaoEscolhida = "Pastel";
+            } elseif ($opção == 2) {
+                $opçaoEscolhida = "Pizza";
+            } elseif ($opção == 3) {
+                $opçaoEscolhida = "Esfiha";
+            } else {
+                $opçaoEscolhida = "Opção inválida";
+            }
+
+            echo "<p>$opçaoEscolhida</p>"
+
+        ?>
     <hr>
 
     <!-- ___________________________________________________________________ -->
@@ -200,9 +248,20 @@
     <p>&nbsp;Criar um programa PHP que gere saída usando Swith/Case adaptando a regra de negócio do modo encadeado:</p>
 
     <hr>
-
-    <!-- Criar aqui seu programa PHP -->
     
+    <!-- Criar aqui seu programa PHP -->
+    <?php
+    $opçao = 2;
+        switch ($opçao) {
+            case 1: $pedido = "Pastel"; break;
+            case 2: $pedido = "Pizza"; break;
+            case 3: $pedido = "Esfiha"; break;
+            default: $pedido = "Opção Inválida"; break;
+        }
+
+        echo "<p>$pedido</p>"
+
+    ?>
     
     <!-- Rodapé -->
     <div class="container">
