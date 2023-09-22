@@ -12,19 +12,30 @@
     <h1 class="destaqueP">Estruturas de Controle e Repetição (Loops)</h1>
     <hr>
     <h2 class="destaque">While (enquanto)</h2>
-
-
-    <!-- 1ª Digitação (Aqui) -->
-
+    <?php
+        $i = 1;
+        while ($i <= 5) {
+    ?>
+    <p><?=$i?></p>
+    <?php
+    $i ++;
+    }
+    ?>
 
 <hr>
 <!-- _______________________________________________________________________________ -->
 
     <h2 class="destaque">do/while (repita)</h2>
 
-
-<!-- 2ª Digitação (Aqui) -->
-
+<?php
+        $j = 1;
+            do{
+?>
+        <div><h3>Olá!</h3></div>
+<?php
+        $j++;
+    } while ($j <=3);
+?>
 
 <hr>
 <!-- _______________________________________________________________________________ -->
@@ -36,7 +47,10 @@
 
     //Controle; Condição; Atualização
 
-    //  3ª Digitação (Aqui)
+    for($i =1; $i <= 10; $i++) {
+        // Linha abaixo concatena (junta)
+        echo $i." ";
+    }
 
  ?>
  <!-- _______________________________________________________________________________ -->
@@ -53,11 +67,17 @@
     $meses = array("Janeiro", "Fevereiro", "Março", "Abril","Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro","Novembro", "Dezembro");
 ?>
     <ol>
+<?php
+    $quantidade = count($meses);
 
+    for($k = 0; $k <$quantidade; $k++) {
 
-        <!-- 4ª Digitação (Aqui) -->
+?>
+    <li><?=$meses[$k]?></li>
 
-
+<?php
+    }
+?>
     </ol>
 
 <!-- _______________________________________________________________________________ -->
@@ -66,8 +86,13 @@
 
 <ol>
 
-
-    <!-- 5ª Digitação (Aqui) -->
+<?php
+    foreach($meses as $mes) {
+?>
+   <li><?=$mes?></li>
+<?php
+}
+?>
     
 
 </ol>
@@ -82,9 +107,13 @@
         "Santos" => "Peixe",
 
     ];
-
-    //  6ª Digitação (Aqui) 
-
+    foreach($clubes as $clube =>$apelido) {
+?>
+    <p>
+        O <?=$clube?> é conhecido como: <?=$apelido?>
+    </p>
+    <?php
+    }
 ?>
 <!-- _______________________________________________________________________________ -->
 <hr>
@@ -110,13 +139,7 @@ $alunos = [
               ]
           ];
 
-    foreach($alunos as $aluno){
-?>
-
-  <!-- 7ª Digitação (Aqui) -->
-
-<?php
-    }
+    foreach($alunos as $aluno) 
 ?>
 
 </body>

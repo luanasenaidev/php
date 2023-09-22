@@ -14,9 +14,15 @@
 <!-- ___________________________________________________________________ -->
     <h2 class="destaque">SE Simples</h2>
 
+<?php
+    $numero = 5;
+    if ($numero >1) {
+        ?>
 
-<!-- 1ª Digitação (Aqui) -->
-
+    <p><?=$numero?> é maior que 1<p>
+        <?php
+    }
+    ?>
 
 <hr>
 <!-- ___________________________________________________________________ -->
@@ -29,11 +35,23 @@
 ?>
 
     <h3><?=$produto?></h3>
-
-
-<!-- 2ª Digitação (Aqui) -->
-
-
+    <?php
+        if($qtdEmEstoque < $qtdCritica) {
+    ?>
+        <p class="repor">É necessário comprar</p>
+    <?php
+        if($qtdEmEstoque === 0) {
+    ?>
+        <p><mark><b>Urgente</b></mark></p>
+    <?php
+        }
+    }
+        else {
+    ?>
+        <p class="ok">EStoque OK!</p>
+    <?php
+        }
+    ?>
 <hr>
 <!-- ___________________________________________________________________ -->
     <h2 class="destaque">Encadeada</h2>
@@ -67,9 +85,15 @@
     // Refatorada (Melhorada)
     $opcao = 1; // comece com qualquer valor
 
-
-    //  3ª Digitação (Aqui) 
-
+if ($opcao ===1) {
+    $opcaoEscolhida = "Pastel";    
+} elseif ($opcao ===2) {
+    $opcaoEscolhida = "Pizza";
+} elseif ($opcao ===3) {
+    $opcaoEscolhida = "Esfiha";
+} else {
+    $opcaoEscolhida = "Opção Inválida";
+}
 
 ?>
     <p><?=$opcaoEscolhida?></p>
@@ -78,7 +102,15 @@
 <!-- ___________________________________________________________________ -->
 <h2 class="destaque">Switch/Case</h2>
 
-<!-- 4ª Digitação (Aqui) -->
+<?php
+switch($opcao){
+    case 1: $pedido = "Pastel"; break;
+    case 2: $pedido = "Pizza"; break;
+    case 3: $pedido = "Esfiha"; break;
+    default: $pedido = "Opçao Inválida"; break;
+    }
+?>
+    <p><?=$pedido?></p>
     
 </body>
 </html>
